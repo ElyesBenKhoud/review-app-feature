@@ -1,4 +1,5 @@
 import "./App.css";
+import FeedbackItem from "./components/FeedbackItem";
 import Header from "./components/Header.jsx";
 
 function App() {
@@ -6,7 +7,7 @@ function App() {
     <>
       <Header />
       <div className="container">
-        <h2>My App</h2>
+        <FeedbackItem />
       </div>
     </>
   );
