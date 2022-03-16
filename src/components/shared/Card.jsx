@@ -1,4 +1,5 @@
 import React from "react";
+import propTypes from "prop-types";
 
 const Card = ({ children, reverse }) => {
   //condional styling
@@ -18,4 +19,12 @@ const Card = ({ children, reverse }) => {
   );
 };
 
+Card.defaultProps = {
+  reverse: false,
+};
+
+Card.propTypes = {
+  childre: propTypes.node.isRequired,
+  reverse: propTypes.bool,
+};
 export default Card;

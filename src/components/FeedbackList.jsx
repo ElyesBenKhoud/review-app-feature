@@ -1,5 +1,7 @@
 import React from "react";
 import FeedbackItem from "./FeedbackItem";
+import propTypes from "prop-types";
+
 const FeedbackList = ({ feedback }) => {
   if (!feedback || feedback.length === 0) {
     return <p> No Feedback Yet !</p>;
@@ -11,6 +13,10 @@ const FeedbackList = ({ feedback }) => {
       ))}
     </div>
   );
+};
+
+FeedbackList.propTypes = {
+  feedback: propTypes.array,
 };
 
 export default FeedbackList;
