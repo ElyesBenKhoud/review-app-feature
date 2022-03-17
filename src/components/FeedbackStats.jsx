@@ -1,4 +1,5 @@
 import React from "react";
+import propTypes from "prop-types";
 
 const FeedbackStats = ({ feedback }) => {
   //calculate rating avrg
@@ -18,4 +19,7 @@ const FeedbackStats = ({ feedback }) => {
   );
 };
 
+FeedbackStats.propTypes = {
+  feedback: propTypes.array.isRequired,
+};
 export default FeedbackStats;
