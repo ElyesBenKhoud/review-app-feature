@@ -1,8 +1,12 @@
 import React, { useState } from "react";
 import Card from "./shared/Card";
 import Button from "./shared/Button";
+
 const FeedbackForm = () => {
   const [text, setText] = useState("");
+  const [btnDisabled, setBtnDisabled] = useState(true);
+  const [message, setMessage] = useState("");
+
   const handleChange = (e) => {
     setText(e.target.value);
   };
@@ -17,8 +21,11 @@ const FeedbackForm = () => {
             placeholder="enter your feedback"
             value={text}
           />
-          <Button type="submit">Send</Button>
+          <Button type="submit" isDisabled={btnDisabled}>
+            Send
+          </Button>
         </div>
+        {message && <div className="message">{message} </div>}
       </form>
     </Card>
   );
