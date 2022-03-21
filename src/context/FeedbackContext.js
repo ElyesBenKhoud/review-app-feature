@@ -42,6 +42,7 @@ export const FeedbackProvider = ({ children }) => {
   };
   return (
     <FeedbackContext.Provider
+      //pass states & func
       value={{
         feedback,
         feedbackEdit,
