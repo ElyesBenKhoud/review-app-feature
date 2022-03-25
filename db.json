@@ -14,21 +14,6 @@
       "id": 3,
       "rating": 6,
       "text": "text json feedback 3"
-    },
-    {
-      "id": 4,
-      "rating": 9,
-      "text": "text json feedback 4"
-    },
-    {
-      "id": 5,
-      "rating": 7,
-      "text": "text json feedback 5"
-    },
-    {
-      "rating": "9",
-      "text": "new feedback item",
-      "id": 6
     }
   ]
 }
