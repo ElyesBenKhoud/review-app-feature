@@ -47,6 +47,28 @@ const RatingSelect = ({ select }) => {
         />
         <label htmlFor="num1">3</label>
       </li>
+      <li>
+        <input
+          type="radio"
+          name="rating"
+          id="num4"
+          value="4"
+          checked={selected === 4}
+          onChange={handleChange}
+        />
+        <label htmlFor="num1">4</label>
+      </li>
+      <li>
+        <input
+          type="radio"
+          name="rating"
+          id="num5"
+          value="5"
+          checked={selected === 5}
+          onChange={handleChange}
+        />
+        <label htmlFor="num1">5</label>
+      </li>
     </ul>
   );
 };
