@@ -54,7 +54,6 @@ export const FeedbackProvider = ({ children }) => {
       edit: true,
     });
   };
-
   //update feedback lfunction
   const updateFeedback = async (id, updItem) => {
     const response = await fetch(`/feedback/${id}`, {
