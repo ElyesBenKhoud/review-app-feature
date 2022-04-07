@@ -3,11 +3,14 @@ import FeedbackContext from "../context/FeedbackContext";
 
 const RatingSelect = ({ select }) => {
   const { feedbackEdit } = useContext(FeedbackContext);
+  const [selected, setSelected] = useState(5);
 
   useEffect(() => {
-    setSelected(feedbackEdit.item.rating);
+    if (feedbackEdit.edit) {
+      setSelected(feedbackEdit.item.rating);
+    }
   }, [feedbackEdit]);
-  const [selected, setSelected] = useState(10);
+
   const handleChange = (e) => {
     setSelected(+e.currentTarget.value);
     select(+e.currentTarget.value);
@@ -20,8 +23,8 @@ const RatingSelect = ({ select }) => {
           name="rating"
           id="num1"
           value="1"
-          checked={selected === 1}
           onChange={handleChange}
+          checked={selected === 1}
         />
         <label htmlFor="num1">1</label>
       </li>{" "}
@@ -31,8 +34,8 @@ const RatingSelect = ({ select }) => {
           name="rating"
           id="num2"
           value="2"
-          checked={selected === 2}
           onChange={handleChange}
+          checked={selected === 2}
         />
         <label htmlFor="num1">2</label>
       </li>{" "}
@@ -42,8 +45,8 @@ const RatingSelect = ({ select }) => {
           name="rating"
           id="num3"
           value="3"
-          checked={selected === 3}
           onChange={handleChange}
+          checked={selected === 3}
         />
         <label htmlFor="num1">3</label>
       </li>
@@ -53,8 +56,8 @@ const RatingSelect = ({ select }) => {
           name="rating"
           id="num4"
           value="4"
-          checked={selected === 4}
           onChange={handleChange}
+          checked={selected === 4}
         />
         <label htmlFor="num1">4</label>
       </li>
@@ -64,8 +67,8 @@ const RatingSelect = ({ select }) => {
           name="rating"
           id="num5"
           value="5"
-          checked={selected === 5}
           onChange={handleChange}
+          checked={selected === 5}
         />
         <label htmlFor="num1">5</label>
       </li>

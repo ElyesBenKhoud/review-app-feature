@@ -18,6 +18,7 @@ export const FeedbackProvider = ({ children }) => {
   //fetch feedback
 
   const FetchFeedback = async () => {
+    //using proxy
     const response = await fetch("/feedback?_sort=id&_order=desc");
     const data = await response.json();
     //store the data coming from json server into feedback array
